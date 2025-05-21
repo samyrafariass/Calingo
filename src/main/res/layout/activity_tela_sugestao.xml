@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TelaSugestao">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_sugestao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/caixa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/logo_toolbar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo_calingo"
+            app:layout_constraintEnd_toEndOf="@id/toolbar_sugestao"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="@id/toolbar_sugestao"
+            app:layout_constraintTop_toTopOf="@id/toolbar_sugestao" />
+
+        <View
+            android:id="@+id/container_sugestao"
+            style="@style/Container_perfil_sugestao"
+            android:background="@drawable/container_perfil_sugestao"
+            android:layout_height="680dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/Text_view_sugestao"
+            style="@style/Text_view1"
+            android:text="Sugira sua expressão"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="@id/container_sugestao"
+            app:layout_constraintEnd_toEndOf="@id/container_sugestao"
+            app:layout_constraintStart_toStartOf="@id/container_sugestao"
+            />
+
+        <EditText
+            android:id="@+id/nome_expressao"
+            style="@style/Edit_text"
+            android:hint="Nome da expressão"
+            android:inputType="text"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/Text_view_sugestao"
+            app:layout_constraintEnd_toEndOf="@id/container_sugestao"
+            app:layout_constraintStart_toStartOf="@id/container_sugestao"
+            />
+
+        <EditText
+            android:id="@+id/significado"
+            style="@style/Edit_text"
+            android:hint="Significado"
+            android:inputType="text"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/nome_expressao"
+            app:layout_constraintEnd_toEndOf="@id/container_sugestao"
+            app:layout_constraintStart_toStartOf="@id/container_sugestao"
+            />
+
+        <EditText
+            android:id="@+id/aplicacao_frase"
+            style="@style/Edit_text"
+            android:hint="Aplicação em frase"
+            android:inputType="text"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/significado"
+            app:layout_constraintEnd_toEndOf="@+id/container_sugestao"
+            app:layout_constraintStart_toStartOf="@+id/container_sugestao"
+            />
+
+        <EditText
+            android:id="@+id/fonologia"
+            style="@style/Edit_text"
+            android:hint="Fonologia"
+            android:inputType="text"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/aplicacao_frase"
+            app:layout_constraintEnd_toEndOf="@+id/container_sugestao"
+            app:layout_constraintStart_toStartOf="@+id/container_sugestao"
+            />
+
+        <EditText
+            android:id="@+id/sinonimo"
+            style="@style/Edit_text"
+            android:hint="Sinonimo"
+            android:inputType="text"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/fonologia"
+            app:layout_constraintEnd_toEndOf="@+id/container_sugestao"
+            app:layout_constraintStart_toStartOf="@+id/container_sugestao"
+            />
+
+        <EditText
+            android:id="@+id/cidade"
+            style="@style/Edit_text"
+            android:hint="Cidade"
+            android:inputType="text"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/sinonimo"
+            app:layout_constraintEnd_toEndOf="@+id/container_sugestao"
+            app:layout_constraintStart_toStartOf="@+id/container_sugestao"
+            />
+
+        <EditText
+            android:id="@+id/estado"
+            style="@style/Edit_text"
+            android:hint="Estado"
+            android:inputType="text"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/cidade"
+            app:layout_constraintEnd_toEndOf="@+id/container_sugestao"
+            app:layout_constraintStart_toStartOf="@+id/container_sugestao"
+            />
+
+        <Button
+            android:id="@+id/btn_sugerir_expressao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:backgroundTint="@color/perfil_sugestao"
+            android:text="Sugerir Expressão"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius="8dp"
+            app:strokeWidth="2dp"
+            app:layout_constraintTop_toBottomOf="@id/estado"
+            app:layout_constraintEnd_toEndOf="@id/container_sugestao"
+            app:layout_constraintStart_toStartOf="@id/container_sugestao"
+            />
+
+        <View
+            android:id="@+id/container_encangado"
+            android:layout_width="196dp"
+            android:layout_height="74dp"
+            android:layout_marginTop="88dp"
+            android:background="@drawable/container_encangado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container_sugestao" />
+
+        <View
+            android:id="@+id/container_encangado1"
+            android:layout_width="196dp"
+            android:layout_height="74dp"
+            android:layout_marginTop="54dp"
+            android:background="@drawable/container_encangado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container_encangado" />
+
+        <TextView
+            android:id="@+id/expressao_encangado2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="105dp"
+            android:text="Encangado"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.928"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container_sugestao" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:text="Encangado"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.928"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expressao_encangado2" />
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav_sugestao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/container"
+            android:layout_marginTop="88dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/container_encangado1"
+            app:menu="@menu/botton_nav_menu"
+            app:labelVisibilityMode="labeled"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

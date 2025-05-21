@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_nav"
+        android:title="Home"
+        android:icon="@drawable/icon_home_menu" />
+
+    <item
+        android:id="@+id/desafio_nav"
+        android:title="Desafio"
+        android:icon="@drawable/icon_desafio_menu"/>
+
+    <item
+        android:id="@+id/expressoes_nav"
+        android:title="Expressão"
+        android:icon="@drawable/icon_expressao_menu"/>
+
+    <item
+        android:id="@+id/perfil_nav"
+        android:title="Perfil"
+        android:icon="@drawable/icon_perfil_menu"/>
+
+</menu>

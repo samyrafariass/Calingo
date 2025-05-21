@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TelaInicial">
+
+        <View
+            android:id="@+id/containerExpressao"
+            style="@style/Container_expressao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <View
+            android:id="@+id/container_txt"
+            style="@style/Container_txt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/txt1_expressao"
+            style="@style/Text_view_expressao"
+            android:text="Expressão do dia"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/container_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <View
+            android:id="@+id/traco_entre_palavras"
+            android:layout_width="62dp"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@id/container_txt"
+            app:layout_constraintTop_toBottomOf="@id/txt1_expressao"
+            app:layout_constraintEnd_toEndOf="@id/container_txt"
+            />
+
+        <TextView
+            android:id="@+id/txt2_expressao"
+            style="@style/Text_view_expressao"
+            android:text="Tabacudo"
+            app:layout_constraintEnd_toEndOf="@+id/container_txt"
+            app:layout_constraintStart_toStartOf="@+id/container_txt"
+            app:layout_constraintTop_toBottomOf="@+id/traco_entre_palavras"
+            />
+
+        <TextView
+            android:id="@+id/txt1_container"
+            style="@style/Text_view_expressao"
+            android:text="Significado"
+            app:layout_constraintEnd_toEndOf="@+id/containerExpressao"
+            app:layout_constraintStart_toStartOf="@+id/containerExpressao"
+            app:layout_constraintTop_toBottomOf="@+id/container_txt"
+            />
+
+        <TextView
+            android:id="@+id/txt2_container"
+            style="@style/Text_view_expressao"
+            android:layout_width="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="20dp"
+            android:padding="15dp"
+            android:text="Expressão informal que significa bobo, tolo ou ingênuo. Pode ser usada de forma cômica ou pejorativa, dependendo do tom e do contexto. Em algumas situações, também pode indicar alguém desastrado ou que comete erros frequentes."
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/containerExpressao"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/containerExpressao"
+            app:layout_constraintTop_toBottomOf="@+id/txt1_container" />
+
+        <View
+            android:id="@+id/container_txt2"
+            android:layout_width="match_parent"
+            android:layout_height="630dp"
+            android:layout_marginTop="112dp"
+            android:background="@drawable/container_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerExpressao" />
+
+        <TextView
+            android:id="@+id/txt3_expressao"
+            style="@style/Text_view_expressao"
+            android:text="Expressões em alta"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerExpressao"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/expressao_arrudear1"
+            style="@style/Text_view1"
+            android:text="Arrudear"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.224"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt3_expressao"/>
+
+        <TextView
+            android:id="@+id/significado_arrudear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Dar a volta, contornar algo."
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.343"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/expressao_arrudear1" />
+
+        <TextView
+            android:id="@+id/frase_arrudear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="\u2022 Pra chegar lá, tem que arrudear."
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.420"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/significado_arrudear1" />
+
+
+        <TextView
+            android:id="@+id/curtida_arrudear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="3dp"
+            android:text="82"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.208"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frase_arrudear1" />
+
+        <ImageButton
+            android:id="@+id/icon_like_arrudear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/icon_like"
+            app:layout_constraintStart_toEndOf="@id/curtida_arrudear1"
+            app:layout_constraintStart_toStartOf="@id/container_txt2"
+            app:layout_constraintTop_toBottomOf="@id/frase_arrudear1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="8dp"
+            android:text="|"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/icon_like_arrudear1"
+            app:layout_constraintStart_toStartOf="@id/container_txt2"
+            app:layout_constraintTop_toBottomOf="@id/frase_arrudear1" />
+
+
+        <TextView
+            android:id="@+id/deslike_arrudear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="3dp"
+            android:text="7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frase_arrudear1" />
+
+        <ImageButton
+            android:id="@+id/icon_deslike_arrudear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="215dp"
+            android:background="@drawable/icon_deslike"
+            app:layout_constraintStart_toEndOf="@id/curtida_arrudear1"
+            app:layout_constraintStart_toStartOf="@id/container_txt2"
+            app:layout_constraintTop_toBottomOf="@id/frase_arrudear1" />
+
+        <TextView
+            android:id="@+id/expressao_arrudear2"
+            style="@style/Text_view1"
+            android:text="Arrudear"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.224"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deslike_arrudear1"/>
+
+        <TextView
+            android:id="@+id/significado_arrudear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dar a volta, contornar algo."
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.343"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/expressao_arrudear2" />
+
+        <TextView
+            android:id="@+id/frase_arrudear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" \u2022 Pra chegar lá, tem que arrudear."
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.420"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/significado_arrudear2" />
+
+
+        <TextView
+            android:id="@+id/curtida_arrudear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="82"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.208"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frase_arrudear2" />
+
+        <ImageButton
+            android:id="@+id/icon_like_arrudear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/icon_like"
+            app:layout_constraintStart_toEndOf="@id/curtida_arrudear2"
+            app:layout_constraintStart_toStartOf="@id/container_txt2"
+            app:layout_constraintTop_toBottomOf="@id/frase_arrudear2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="8dp"
+            android:text="|"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/icon_like_arrudear2"
+            app:layout_constraintStart_toStartOf="@id/container_txt2"
+            app:layout_constraintTop_toBottomOf="@id/frase_arrudear2" />
+
+        <TextView
+            android:id="@+id/deslike_arrudear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="7"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frase_arrudear2" />
+
+        <ImageButton
+            android:id="@+id/icon_deslike_arrudear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="215dp"
+            android:background="@drawable/icon_deslike"
+            app:layout_constraintStart_toEndOf="@id/curtida_arrudear2"
+            app:layout_constraintStart_toStartOf="@id/container_txt2"
+            app:layout_constraintTop_toBottomOf="@id/frase_arrudear2" />
+
+        <TextView
+            android:id="@+id/expressao_arrudear3"
+            style="@style/Text_view1"
+            android:text="Arrudear"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.224"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deslike_arrudear2"/>
+
+        <TextView
+            android:id="@+id/significado_arrudear3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dar a volta, contornar algo."
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintHorizontal_bias="0.343"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/expressao_arrudear3" />
+
+        <TextView
+            android:id="@+id/frase_arrudear3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\u2022 Pra chegar lá, tem que arrudear."
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintHorizontal_bias="0.420"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/significado_arrudear3" />
+
+
+        <ImageButton
+            android:id="@+id/icon_like_arrudear3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/icon_like"
+            app:layout_constraintStart_toEndOf="@id/curtida_arrudear3"
+            app:layout_constraintStart_toStartOf="@id/container_txt2"
+            app:layout_constraintTop_toBottomOf="@id/frase_arrudear3" />
+
+        <TextView
+            android:id="@+id/curtida_arrudear3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="3dp"
+            android:text="82"
+            app:layout_constraintHorizontal_bias="0.197"
+            app:layout_constraintEnd_toEndOf="@id/container_txt2"
+            app:layout_constraintStart_toStartOf="@id/container_txt2"
+            app:layout_constraintTop_toBottomOf="@id/frase_arrudear3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="8dp"
+            android:text="|"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/icon_like_arrudear3"
+            app:layout_constraintStart_toStartOf="@id/container_txt2"
+            app:layout_constraintTop_toBottomOf="@id/frase_arrudear3" />
+
+
+        <TextView
+            android:id="@+id/deslike_arrudear3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="7"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frase_arrudear3" />
+
+        <ImageButton
+            android:id="@+id/icon_deslike_arrudear3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="215dp"
+            android:background="@drawable/icon_deslike"
+            app:layout_constraintStart_toEndOf="@id/curtida_arrudear3"
+            app:layout_constraintStart_toStartOf="@id/container_txt2"
+            app:layout_constraintTop_toBottomOf="@id/frase_arrudear3" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav_inicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/container"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/container_txt2"
+            app:menu="@menu/botton_nav_menu"
+            app:labelVisibilityMode="labeled"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

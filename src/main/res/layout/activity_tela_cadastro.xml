@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TelaCadastro">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="124dp"
+            android:layout_height="124dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/logo_calingo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/app_name"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:backgroundTint="@color/white"
+            android:text="Entrar"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            />
+
+        <View
+            android:id="@+id/containerComponents"
+            style="@style/ContainerComponents"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+        <TextView
+            android:id="@+id/txt"
+            style="@style/Text_view"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintStart_toStartOf="@id/containerComponents"
+            app:layout_constraintTop_toTopOf="@+id/containerComponents" />
+
+        <EditText
+            android:id="@+id/edit_apelido"
+            style="@style/Edit_text_caixa"
+            android:hint="Apelido"
+            android:autofillHints="name"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintTop_toBottomOf="@+id/txt" />
+
+        <EditText
+            android:id="@+id/edit_email"
+            style="@style/Edit_text_caixa"
+            android:hint="Email"
+            android:autofillHints="emailAddress"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintTop_toBottomOf="@+id/edit_apelido" />
+
+        <EditText
+            android:id="@+id/edit_senha"
+            style="@style/Edit_text_caixa"
+            android:hint="Senha"
+            android:autofillHints="password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintTop_toBottomOf="@+id/edit_email" />
+
+
+        <EditText
+            android:id="@+id/edit_cidade"
+            style="@style/Edit_text_caixa_cidade_estado"
+            android:hint="Cidade"
+            android:inputType="text"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/edit_senha"
+            app:layout_constraintStart_toStartOf="@id/containerComponents"
+            app:layout_constraintEnd_toStartOf="@+id/edit_estado"
+            />
+
+        <EditText
+            android:id="@+id/edit_estado"
+            style="@style/Edit_text_caixa_cidade_estado"
+            android:hint="Estado"
+            android:inputType="text"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/edit_senha"
+            app:layout_constraintStart_toEndOf="@id/edit_cidade"
+            app:layout_constraintEnd_toEndOf="@id/containerComponents"
+            />
+
+        <Button
+            android:id="@+id/btn_cadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:backgroundTint="@color/botao"
+            android:text="Cadastrar"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="@id/containerComponents"
+            app:layout_constraintStart_toStartOf="@id/containerComponents"
+            app:layout_constraintTop_toBottomOf="@+id/edit_estado" />
+
+        <LinearLayout
+            android:id="@+id/social_buttons_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="28dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/btn_cadastro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageButton
+                android:id="@+id/btn_google"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@null"
+                android:contentDescription="Logo do google"
+                android:src="@drawable/icon_google"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_facebook"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@null"
+                android:contentDescription="Logo do facebook"
+                android:src="@drawable/icon_facebook"
+                android:layout_marginStart="16dp"
+                />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/containerComponents"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            android:visibility="invisible"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
