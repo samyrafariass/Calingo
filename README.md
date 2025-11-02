@@ -1,3 +1,4 @@
 # Calingo
 
-- Telas: Cadastro, Inicial, Sugestão e Perfil
+- Projeto de Desenvolvimento Mobile Android
+- Minhas responsabilidades: Tela de Cadastro, Tela Inicial, Tela de Sugestão e Perfil
